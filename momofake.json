@@ -21,14 +21,15 @@
       {"clash_mode": "global", "server": "foreign"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
       {"rule_set": "pt-domains", "server": "local"},
-      {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
+      {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 3}
     ],
     "final": "foreign",
     "strategy": "ipv4_only",
     "independent_cache": true,
-    "cache_expire": 3600000,
-    "client_subnet": "114.114.114.114/24"
-  },
+    "cache_expire": 300000,
+    "client_subnet": "114.114.114.0/24"
+  }
+}
   "outbounds": [
     {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["♻️ 自动选择", "🇭🇰 香港自动", "🇯🇵 日本自动", "🇸🇬 狮城自动", "🇺🇲 美国自动", "🇹🇼 台湾自动", "🌏 其他地区", "🐸 手动选择"]},
     {"tag": "🧠 AI", "type": "selector", "outbounds": [ "🇺🇲 美国自动", "🇯🇵 日本自动", "🇸🇬 狮城自动"]},
