@@ -1,0 +1,24 @@
+version: 1
+rules:
+  - domain_suffix: audiences.me
+  - domain_suffix: hhanclub.top
+  - domain_suffix: ptchdbits.co
+  - domain_suffix: hdsky.me
+  - domain_suffix: pterclub.com
+  - domain_suffix: m-team.cc
+  - domain_suffix: ourbits.club
+  - domain_suffix: keepfrds.com
+  - domain_suffix: hdhome.org
+  - domain_suffix: springsunday.net
+  - domain_suffix: totheglory.im
+  - domain_suffix: piggo.me
+  - domain_suffix: hdarea.club
+  - domain_suffix: hdtime.org
+  - domain_suffix: hdfans.org
+  - domain_suffix: soulvoice.club
+  - domain_suffix: nicept.net
+  - domain_suffix: pttime.org
+  - domain_suffix: hddolby.com
+  - domain_suffix: pandapt.net
+  - domain_suffix: zhuque.in
+  - domain_suffix: lemonhd.club
