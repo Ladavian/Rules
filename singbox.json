@@ -4,7 +4,6 @@
     "level": "info",
     "timestamp": true
   },
-
   "experimental": {
     "clash_api": {
       "external_controller": "0.0.0.0:9095",
@@ -24,7 +23,6 @@
       "rdrc_timeout": "7d"
     }
   },
-
   "dns": {
     "servers": [
       {
@@ -73,11 +71,10 @@
     "independent_cache": false,
     "client_subnet": "1.0.1.0"
   },
-
- "inbounds": [
+  "inbounds": [
     {
       "tag": "dns-in",
-      "type": "direct",
+      "type": "dns",
       "listen": "::",
       "listen_port": 1053
     },
@@ -114,8 +111,6 @@
         "fdfe:dcba:9876::1/126"
       ],
       "mtu": 9000,
-      "auto_route": true,
-      "auto_redirect": true,
       "strict_route": true,
       "route_exclude_address": [
         "100.64.0.0/10",
@@ -125,9 +120,7 @@
       ],
       "endpoint_independent_nat": false,
       "stack": "mixed",
-      "exclude_interface": ["tailscale0"],
-      "auto_route": false,
-      "auto_redirect": false
+      "exclude_interface": ["tailscale0"]
     },
     {
       "tag": "mixed-in",
