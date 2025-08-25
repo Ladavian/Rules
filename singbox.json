@@ -74,7 +74,7 @@
     "client_subnet": "1.0.1.0"
   },
 
-  "inbounds": [
+ "inbounds": [
     {
       "tag": "dns-in",
       "type": "direct",
