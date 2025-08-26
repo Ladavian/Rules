@@ -107,16 +107,6 @@
     "exclude_interface": ["tailscale0"]
   }
 ],
-    {
-      "tag": "mixed-in",
-      "type": "mixed",
-      "listen": "0.0.0.0",
-      "listen_port": 7893,
-      "tcp_fast_open": true,
-      "tcp_multi_path": true,
-      "udp_fragment": true
-    }
-  ],
   "outbounds": [
     {
       "tag": "🚀 节点选择",
