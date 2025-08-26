@@ -72,56 +72,41 @@
     "client_subnet": "1.0.1.0"
   },
   "inbounds": [
-    {
-      "tag": "dns-in",
-      "type": "direct",
-      "listen": "::",
-      "listen_port": 1053
-    },
-    {
-      "tag": "http-in",
-      "type": "http",
-      "listen": "::",
-      "listen_port": 8080
-    },
-    {
-      "tag": "socks-in",
-      "type": "socks",
-      "listen": "::",
-      "listen_port": 1080
-    },
-    {
-      "tag": "redirect-in",
-      "type": "redirect",
-      "listen": "::",
-      "listen_port": 7890
-    },
-    {
-      "tag": "tproxy-in",
-      "type": "tproxy",
-      "listen": "::",
-      "listen_port": 7891
-    },
-    {
-      "tag": "tun-in",
-      "type": "tun",
-      "interface_name": "momo",
-      "address": [
-        "172.31.0.1/30",
-        "fdfe:dcba:9876::1/126"
-      ],
-      "mtu": 9000,
-      "strict_route": true,
-      "route_exclude_address": [
-        "100.64.0.0/10",
-        "127.0.0.0/8",
-        "192.168.2.0/24",
-        "192.168.100.0/24"
-      ],
-      "endpoint_independent_nat": false,
-      "stack": "mixed",
-      "exclude_interface": ["tailscale0"]
-    },
+  {
+    "tag": "dns-in",
+    "type": "dns",
+    "listen": "::",
+    "listen_port": 1053
+  },
+  {
+    "tag": "mixed-in",
+    "type": "mixed",
+    "listen": "0.0.0.0",
+    "listen_port": 7893,
+    "tcp_fast_open": true,
+    "tcp_multi_path": true,
+    "udp_fragment": true
+  },
+  {
+    "tag": "tun-in",
+    "type": "tun",
+    "interface_name": "momo",
+    "address": [
+      "172.31.0.1/30",
+      "fdfe:dcba:9876::1/126"
+    ],
+    "mtu": 9000,
+    "strict_route": true,
+    "route_exclude_address": [
+      "100.64.0.0/10",
+      "127.0.0.0/8",
+      "192.168.2.0/24",
+      "192.168.100.0/24"
+    ],
+    "stack": "mixed",
+    "exclude_interface": ["tailscale0"]
+  }
+],
     {
       "tag": "mixed-in",
       "type": "mixed",
@@ -311,11 +296,11 @@
       { "tag": "geosite-geolocation-!cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/geolocation-!cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geosite-private", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/private.srs", "download_detour": "🎯 全球直连" },
-      {"tag": "pt-sites", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/Ladavian/Rules/refs/heads/main/rules/pt-sites.yaml", "download_detour": "🎯 全球直连"},
+      { "tag": "pt-sites", "type": "remote", "format": "source", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/Ladavian/Rules/refs/heads/main/rules/ptsite.json", "download_detour": "🎯 全球直连"},
       { "tag": "geoip-google", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/google.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geoip-telegram", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/telegram.srs", "download_detour": "🎯 全球直连" },     
       { "tag": "geoip-netflix", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/netflix.srs", "download_detour": "🎯 全球直连" },     
-      { "tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo-lite/geoip/apple.srs", "download_detour": "🎯 全球直连" },
+      { "tag": "geoip-apple", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/apple.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geoip-cn", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/cn.srs", "download_detour": "🎯 全球直连" },
       { "tag": "geoip-private", "type": "remote", "format": "binary", "url": "https://gh-proxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geoip/private.srs", "download_detour": "🎯 全球直连" }
     ]
