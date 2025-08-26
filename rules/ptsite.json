@@ -1,27 +1,31 @@
 {
   "version": 1,
   "rules": [
-    { "type": "domain_suffix", "value": "audiences.me" },
-    { "type": "domain_suffix", "value": "hhanclub.top" },
-    { "type": "domain_suffix", "value": "ptchdbits.co" },
-    { "type": "domain_suffix", "value": "hdsky.me" },
-    { "type": "domain_suffix", "value": "pterclub.com" },
-    { "type": "domain_suffix", "value": "m-team.cc" },
-    { "type": "domain_suffix", "value": "ourbits.club" },
-    { "type": "domain_suffix", "value": "keepfrds.com" },
-    { "type": "domain_suffix", "value": "hdhome.org" },
-    { "type": "domain_suffix", "value": "springsunday.net" },
-    { "type": "domain_suffix", "value": "totheglory.im" },
-    { "type": "domain_suffix", "value": "piggo.me" },
-    { "type": "domain_suffix", "value": "hdarea.club" },
-    { "type": "domain_suffix", "value": "hdtime.org" },
-    { "type": "domain_suffix", "value": "hdfans.org" },
-    { "type": "domain_suffix", "value": "soulvoice.club" },
-    { "type": "domain_suffix", "value": "nicept.net" },
-    { "type": "domain_suffix", "value": "pttime.org" },
-    { "type": "domain_suffix", "value": "hddolby.com" },
-    { "type": "domain_suffix", "value": "pandapt.net" },
-    { "type": "domain_suffix", "value": "zhuque.in" },
-    { "type": "domain_suffix", "value": "lemonhd.club" }
+    {
+      "domain_suffix": [
+        "audiences.me"，
+        "hhanclub.top"，
+        "ptchdbits.co"，
+        "hdsky.me"，
+        "pterclub.com"，
+        "m-team.cc"，
+        "ourbits.club"，
+        "keepfrds.com"，
+        "hdhome.org"，
+        "springsunday.net"，
+        "totheglory.im"，
+        "piggo.me"，
+        "hdarea.club"，
+        "hdtime.org"，
+        "hdfans.org"，
+        "soulvoice.club"，
+        "nicept.net"，
+        "pttime.org"，
+        "hddolby.com"，
+        "pandapt.net"，
+        "zhuque.in",
+        "lemonhd.club"
+      ]
+    }
   ]
 }
