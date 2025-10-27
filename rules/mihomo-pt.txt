@@ -4,6 +4,7 @@ payload:
   - '+.ptchdbits.co'
   - '+.hdsky.me'
   - '+.pterclub.com'
+  - '+.pterclub.net'
   - '+.m-team.cc'
   - '+.ourbits.club'
   - '+.keepfrds.com'
