@@ -5,6 +5,7 @@ rules:
   - domain_suffix: ptchdbits.co
   - domain_suffix: hdsky.me
   - domain_suffix: pterclub.com
+  - domain_suffix: pterclub.net
   - domain_suffix: m-team.cc
   - domain_suffix: ourbits.club
   - domain_suffix: keepfrds.com
